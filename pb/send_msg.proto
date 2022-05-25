@@ -12,6 +12,7 @@ package pb;
 // Interface exported by the server.
 service Message {
   rpc SendMsg(SendMsgReq) returns (SendMsgRep) {}
+  rpc SendAll(SendMsgAllReq) returns (SendMsgAllRep) {}
 }
 
 // Points are represented as latitude-longitude pairs in the E7 representation
@@ -27,4 +28,16 @@ message SendMsgReq {
 message SendMsgRep {
   int32 code = 1;
   string msg = 2;
+}
+
+message SendMsgAllReq {
+  string appid = 1;
+  repeated string userid = 2;
+  string message = 3;
+}
+
+message SendMsgAllRep {
+  int32 code = 1;
+  string msg = 2;
+  int32 count =3 ;
 }
