@@ -12,3 +12,8 @@
  - 检查gopath目录（%GOPATH%\）的bin文件夹，是否有protoc-gen-go.exe，protoc-gen-go-grpc.exe,拷贝至goroot（%GOROOT%\）的bin目录下
  - cd pb && protoc --go_out=plugins=grpc:. send_msg.proto  
 
+
+## 打包
+
+gf build main.go -n ws_link -s=linux -a=amd64
+
