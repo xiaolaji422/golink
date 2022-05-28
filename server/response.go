@@ -22,7 +22,6 @@ func NewResponse(AppID, UserID string) (*Response, error) {
 	}
 	var conn = Conns.GetConn(AppID, UserID)
 	if helper.IsNil(conn) {
-		fmt.Println(Conns, AppID, UserID, "当前用户暂不在线")
 		return nil, errors.New("当前用户暂不在线")
 	}
 	rep.Conn = conn
@@ -49,6 +48,28 @@ func (r *Response) SendMsg(code int, msg string, list ...interface{}) error {
 	// 获取Conn
 	r.Conn.Write(res_byt)
 	return err
+}
+
+func SendAll(AppID string, msg []byte) (int, error) {
+	var (
+		conn_set = Conns.getSet(AppID)
+		rows     = 0
+	)
+	if helper.IsNil(conn_set) {
+		return 0, errors.New("当前系统无用户：" + AppID)
+	}
+
+	if len(conn_set.pool) > 0 {
+		for _, v := range conn_set.pool {
+			err := v.Write(msg)
+			if err != nil {
+				fmt.Println("error on sendAll:", err.Error())
+			}
+			rows++
+		}
+	}
+
+	return rows, nil
 }
 
 // 发送消息到指定某人

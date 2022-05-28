@@ -2,6 +2,8 @@ package server
 
 import (
 	"sync"
+
+	"github.com/xiaolaji422/golink/lib/helper"
 )
 
 var Conns *connPool
@@ -17,8 +19,9 @@ func init() {
 type connPool struct {
 	mutex *sync.RWMutex
 	sets  map[string]*connSet // 所有的链接
-
 }
+
+// 获取所有链接
 
 // 获取set
 func (c *connPool) getSet(AppId string) *connSet {
@@ -40,13 +43,18 @@ func (c *connPool) getSet(AppId string) *connSet {
 // func close
 func (c *connPool) GetConn(AppId, UserId string) *Conn {
 	var set = c.getSet(AppId)
-
+	if helper.IsNil(set) {
+		return nil
+	}
 	return set.getConn(UserId)
 }
 
 // add  conn to clients
 func (c *connPool) AddConn(AppId, UserId string, conn *Conn) {
 	var set = c.getSet(AppId)
+	if helper.IsNil(set) {
+		set = &connSet{}
+	}
 	set.addConn(UserId, conn)
 }
 
