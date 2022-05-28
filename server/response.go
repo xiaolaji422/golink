@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"git.woa.com/chengdukf/go-link/lib/helper"
+	"github.com/xiaolaji422/golink/lib/helper"
 )
 
 // 返回结构体

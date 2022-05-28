@@ -3,8 +3,8 @@ package grpc
 import (
 	"context"
 
-	"git.woa.com/chengdukf/go-link/pb"
-	"git.woa.com/chengdukf/go-link/server"
+	"github.com/xiaolaji422/golink/pb"
+	"github.com/xiaolaji422/golink/server"
 )
 
 type grpcSer struct{}

@@ -3,7 +3,7 @@ package server
 import (
 	"errors"
 
-	"git.woa.com/chengdukf/go-link/lib/helper"
+	"github.com/xiaolaji422/golink/lib/helper"
 )
 
 // 注册的方法

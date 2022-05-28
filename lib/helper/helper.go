@@ -7,7 +7,7 @@ package helper
 import (
 	"reflect"
 
-	"git.woa.com/chengdukf/go-link/c/val"
+	"github.com/xiaolaji422/golink/c/val"
 )
 
 func GetMapVal(data map[string]interface{}, key string, def ...interface{}) val.Var {

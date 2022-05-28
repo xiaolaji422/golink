@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"git.woa.com/chengdukf/go-link/config"
-	"git.woa.com/chengdukf/go-link/grpc"
-	"git.woa.com/chengdukf/go-link/server"
+	"github.com/xiaolaji422/golink/config"
+	"github.com/xiaolaji422/golink/grpc"
+	"github.com/xiaolaji422/golink/server"
 	_ "google.golang.org/grpc"
 	// _ ""
 )

@@ -3,8 +3,8 @@ package server
 import (
 	"fmt"
 
-	"git.woa.com/chengdukf/go-link/lib/helper"
-	lib "git.woa.com/chengdukf/go-link/lib/helper"
+	"github.com/xiaolaji422/golink/lib/helper"
+	lib "github.com/xiaolaji422/golink/lib/helper"
 )
 
 type Handler func(req *Request)

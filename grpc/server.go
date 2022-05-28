@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	"git.woa.com/chengdukf/go-link/pb"
+	"github.com/xiaolaji422/golink/pb"
 	"google.golang.org/grpc"
 )
 

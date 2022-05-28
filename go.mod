@@ -1,4 +1,4 @@
-module git.woa.com/chengdukf/go-link
+module github.com/xiaolaji422/golink
 
 go 1.17
 
