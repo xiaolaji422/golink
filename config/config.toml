@@ -5,3 +5,7 @@ version="10"
 port="9559"
 [grpc]
 port=9558
+
+[log]
+defalut_dir="./"
+defalut_file="golink.log"
