@@ -6,6 +6,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"time"
 
 	"github.com/xiaolaji422/golink/config"
 	"github.com/xiaolaji422/golink/lib/file"
@@ -73,9 +74,8 @@ func (l *logger) Info(data ...interface{}) error {
 // 写入日志
 func (l *logger) Write(level string, data ...interface{}) error {
 	var (
-		path = l.log_dir + l.log_file
+		path = fmt.Sprintf("%s/%s/%s", l.log_dir, time.Now().Format("20060102"), l.log_file)
 	)
-	fmt.Println(path, "Write")
 	if err := file.CreateDir(path, 0666); err != nil {
 		return err
 	}
@@ -84,15 +84,9 @@ func (l *logger) Write(level string, data ...interface{}) error {
 	var data1 = make([]interface{}, 0)
 	data1 = append(data1, content)
 	data1 = append(data1, data...)
-	// 组织时间
-	// if len(data) > 0 {
-	// 	for _, v := range data {
-	// 		content += " | " + str.String(v)
-	// 	}
-	// }
 
 	// 写入文件
-	f, err := os.OpenFile("log.log", os.O_CREATE|os.O_APPEND|os.O_RDWR, os.ModePerm)
+	f, err := os.OpenFile(path, os.O_CREATE|os.O_APPEND|os.O_RDWR, os.ModePerm)
 	if err != nil {
 		return err
 	}
@@ -100,7 +94,8 @@ func (l *logger) Write(level string, data ...interface{}) error {
 		f.Close()
 	}()
 
-	multiWriter := io.MultiWriter(os.Stdout, f)
+	// multiWriter := io.MultiWriter(os.Stdout, f)	// 同时输出到终端和文件
+	multiWriter := io.MultiWriter(f)
 	log.SetFlags(log.Ldate | log.Lmicroseconds | log.Llongfile)
 
 	log.SetOutput(multiWriter)

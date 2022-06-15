@@ -1,17 +1,12 @@
 package file
 
 import (
-	"fmt"
 	"io/fs"
 	"os"
 	"path/filepath"
 )
 
 func CreateDir(path string, perm fs.FileMode) error {
-	fmt.Println(filepath.Clean(path), filepath.Dir(filepath.Clean(path)), "CreateDir")
-	// if filepath.Dir(filepath.Clean(path)) == "." {
-	// 	return errors.New("非法路径：" + path)
-	// }
 	// filepath.Split 分割路径合文件
 	paths, _ := filepath.Split(path)
 

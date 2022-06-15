@@ -1,7 +1,6 @@
 package grpc
 
 import (
-	"fmt"
 	"log"
 	"net"
 
@@ -10,7 +9,6 @@ import (
 )
 
 func Run(port string) {
-
 	lis, err := net.Listen("tcp", ":"+port)
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
@@ -20,5 +18,4 @@ func Run(port string) {
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
-	fmt.Println("grpc start:" + port)
 }

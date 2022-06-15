@@ -7,5 +7,5 @@ port="9559"
 port=9558
 
 [log]
-defalut_dir="./"
+defalut_dir="./logs/"
 defalut_file="golink.log"

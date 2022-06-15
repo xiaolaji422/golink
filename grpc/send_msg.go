@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 
+	"github.com/xiaolaji422/golink/lib/log"
 	"github.com/xiaolaji422/golink/pb"
 	"github.com/xiaolaji422/golink/server"
 )
@@ -14,6 +15,7 @@ type grpcSer struct{}
 func (*grpcSer) SendMsg(ctx context.Context, in *pb.SendMsgReq) (*pb.SendMsgRep, error) {
 	//
 	var res *pb.SendMsgRep = &pb.SendMsgRep{}
+	log.Instance().Info(in.Appid, in.Userid, in.Message)
 	wxRsp, err := server.NewResponse(in.Appid, in.Userid)
 	if err != nil {
 		return res, err

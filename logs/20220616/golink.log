@@ -1,0 +1,34 @@
+2022/06/16 00:14:53.541756 D:/golang/src/golink/lib/log/log.go:102: 【Info】 read a requestion: {"userid":9,"appid":422}  
+2022/06/16 00:14:53.544341 D:/golang/src/golink/lib/log/log.go:102: 【Success】 Register a User: 422.000000 9.000000
+2022/06/16 00:14:53.546085 D:/golang/src/golink/lib/log/log.go:102: 【Info】 sendmsg on  response: 0 注册成功 [success]  
+2022/06/16 00:14:58.291537 D:/golang/src/golink/lib/log/log.go:102: 【Info】 read a requestion: {"userid":9,"appid":422}  
+2022/06/16 00:14:58.292939 D:/golang/src/golink/lib/log/log.go:102: 【Success】 Register a User: 422.000000 9.000000
+2022/06/16 00:14:58.294603 D:/golang/src/golink/lib/log/log.go:102: 【Info】 sendmsg on  response: 0 注册成功 [success]  
+2022/06/16 00:16:29.600890 D:/golang/src/golink/lib/log/log.go:102: 【Info】 read a requestion: {"userid":9,"appid":422}  
+2022/06/16 00:16:29.602028 D:/golang/src/golink/lib/log/log.go:102: 【Success】 Register a User: 422.000000 9.000000
+2022/06/16 00:16:29.603898 D:/golang/src/golink/lib/log/log.go:102: 【Info】 sendmsg on  response: 0 注册成功 [success]  
+2022/06/16 00:18:41.775032 D:/golang/src/golink/lib/log/log.go:102: 【Info】 read a requestion: {"userid":9,"appid":422}  
+2022/06/16 00:18:41.776159 D:/golang/src/golink/lib/log/log.go:102: 【Info】 GetMapVal: appid 422 float64
+2022/06/16 00:18:41.776715 D:/golang/src/golink/lib/log/log.go:102: 【Info】 GetMapVal: userid 9 float64
+2022/06/16 00:18:41.777834 D:/golang/src/golink/lib/log/log.go:102: 【Success】 Register a User: 422.000000 9.000000
+2022/06/16 00:18:41.778920 D:/golang/src/golink/lib/log/log.go:102: 【Info】 sendmsg on  response: 0 注册成功 [success]  
+2022/06/16 00:21:09.760603 D:/golang/src/golink/lib/log/log.go:102: 【Info】 read a requestion: {"userid":9,"appid":422}  
+2022/06/16 00:21:09.762160 D:/golang/src/golink/lib/log/log.go:102: 【Info】 GetMapVal: map[appid:422 userid:9] appid 422 float64
+2022/06/16 00:21:09.763001 D:/golang/src/golink/lib/log/log.go:102: 【Info】 GetMapVal: map[appid:422 userid:9] userid 9 float64
+2022/06/16 00:21:09.764319 D:/golang/src/golink/lib/log/log.go:102: 【Success】 Register a User: 422.000000 9.000000
+2022/06/16 00:21:09.765097 D:/golang/src/golink/lib/log/log.go:102: 【Info】 sendmsg on  response: 0 注册成功 [success]  
+2022/06/16 00:22:35.984463 D:/golang/src/golink/lib/log/log.go:102: 【Info】 read a requestion: {"userid":"9nft","appid":"422nft"}  
+2022/06/16 00:22:35.986391 D:/golang/src/golink/lib/log/log.go:102: 【Info】 GetMapVal: map[appid:422nft userid:9nft] appid 422nft string
+2022/06/16 00:22:35.988037 D:/golang/src/golink/lib/log/log.go:102: 【Info】 GetMapVal: map[appid:422nft userid:9nft] userid 9nft string
+2022/06/16 00:22:35.989581 D:/golang/src/golink/lib/log/log.go:102: 【Success】 Register a User: 422nft 9nft
+2022/06/16 00:22:35.991508 D:/golang/src/golink/lib/log/log.go:102: 【Info】 sendmsg on  response: 0 注册成功 [success]  
+2022/06/16 00:22:44.860855 D:/golang/src/golink/lib/log/log.go:102: 【Info】 read a requestion: {"userid":"9nft","appid":"422nft"}  
+2022/06/16 00:22:44.862455 D:/golang/src/golink/lib/log/log.go:102: 【Info】 GetMapVal: map[appid:422nft userid:9nft] appid 422nft string
+2022/06/16 00:22:44.863535 D:/golang/src/golink/lib/log/log.go:102: 【Info】 GetMapVal: map[appid:422nft userid:9nft] userid 9nft string
+2022/06/16 00:22:44.864615 D:/golang/src/golink/lib/log/log.go:102: 【Success】 Register a User: 422nft 9nft
+2022/06/16 00:22:44.865700 D:/golang/src/golink/lib/log/log.go:102: 【Info】 sendmsg on  response: 0 注册成功 [success]  
+2022/06/16 00:24:07.986350 D:/golang/src/golink/lib/log/log.go:102: 【Info】 read a requestion: {"userid":"9nft","appid":"422nft"}  
+2022/06/16 00:24:07.987468 D:/golang/src/golink/lib/log/log.go:102: 【Info】 GetMapVal: map[appid:422nft userid:9nft] appid 422nft string
+2022/06/16 00:24:07.988007 D:/golang/src/golink/lib/log/log.go:102: 【Info】 GetMapVal: map[appid:422nft userid:9nft] userid 9nft string
+2022/06/16 00:24:07.989130 D:/golang/src/golink/lib/log/log.go:102: 【Success】 Register a User: 422nft 9nft
+2022/06/16 00:24:07.990251 D:/golang/src/golink/lib/log/log.go:102: 【Info】 sendmsg on  response: 0 注册成功 [success]  

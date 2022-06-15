@@ -6,6 +6,7 @@ import (
 	"fmt"
 
 	"github.com/xiaolaji422/golink/lib/helper"
+	"github.com/xiaolaji422/golink/lib/log"
 )
 
 // 返回结构体
@@ -22,6 +23,7 @@ func NewResponse(AppID, UserID string) (*Response, error) {
 	}
 	var conn = Conns.GetConn(AppID, UserID)
 	if helper.IsNil(conn) {
+		log.Instance().Error("当前用户暂不在线:appid ", AppID, UserID)
 		return nil, errors.New("当前用户暂不在线")
 	}
 	rep.Conn = conn
@@ -30,6 +32,10 @@ func NewResponse(AppID, UserID string) (*Response, error) {
 
 //	发送消息
 func (r *Response) SendMsg(code int, msg string, list ...interface{}) error {
+	if code != 101 {
+		log.Instance().Info("sendmsg on  response:", code, msg, list, r.AppId, r.UserId)
+	}
+
 	var res = map[string]interface{}{
 		"code": code,
 		"msg":  msg,
@@ -68,7 +74,6 @@ func SendAll(AppID string, msg []byte) (int, error) {
 			rows++
 		}
 	}
-
 	return rows, nil
 }
 
